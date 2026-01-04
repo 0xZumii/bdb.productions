@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BDB DOT CUM - Morble Hacks</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(45deg, #1a1a2e, #16213e);
+            color: #00ff00;
+            min-height: 100vh;
+        }
+
+        .landing-page {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        .landing-page h1 {
+            font-size: 2.5em;
+            color: white;
+            font-weight: 600;
+            margin-bottom: 15px;
+            letter-spacing: 0;
+        }
+
+        .landing-page .tagline {
+            font-size: 1.1em;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 45px;
+            font-weight: 300;
+        }
+
+        .enter-btn {
+            background: white;
+            border: none;
+            color: #667eea;
+            font-size: 1.2em;
+            padding: 18px 60px;
+            cursor: pointer;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        .enter-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .marketplace {
+            display: none;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .marketplace.active {
+            display: block;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            border-bottom: 2px solid #00ff00;
+            padding-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            text-shadow: 0 0 10px #00ff00;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #00cc00;
+            font-size: 1.2em;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .product {
+            background: rgba(0, 0, 0, 0.5);
+            border: 2px solid #00ff00;
+            padding: 25px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .product:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 255, 0, 0.3);
+            border-color: #00ff00;
+        }
+
+        .product h3 {
+            color: #00ff00;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+            text-shadow: 0 0 5px #00ff00;
+        }
+
+        .product p {
+            color: #00cc00;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            color: #ffff00;
+            font-size: 1.3em;
+            font-weight: bold;
+            margin: 15px 0;
+            text-shadow: 0 0 5px #ffff00;
+        }
+
+        .buy-btn {
+            background: #00ff00;
+            color: #000;
+            border: none;
+            padding: 10px 25px;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: all 0.3s;
+            font-family: 'Courier New', monospace;
+        }
+
+        .buy-btn:hover {
+            background: #00cc00;
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+        }
+
+        .warning {
+            background: rgba(255, 0, 0, 0.2);
+            border: 1px solid #ff0000;
+            color: #ff6666;
+            padding: 15px;
+            margin: 30px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="landing-page" id="landing">
+        <h1>BDB DOT CUM</h1>
+        <p class="tagline">Home of all your morble needs</p>
+        <button class="enter-btn" onclick="enterSite()">Come on in</button>
+    </div>
+
+    <div class="marketplace" id="marketplace">
+        <div class="header">
+            <h1>🔮 PREMIUM MORBLE HACKS 🔮</h1>
+            <p>Get the competitive edge in your marble games!</p>
+        </div>
+
+        <div class="warning">
+            ⚠️ FOR RECREATIONAL MARBLE USE ONLY ⚠️<br>
+            Not responsible for playground bans
+        </div>
+
+        <div class="products">
+            <div class="product">
+                <h3>👁️ WallHack Pro</h3>
+                <p>See through opaque marble bags! Know what your opponent is packing before the game even starts. Includes X-ray vision for marble identification through cloth and leather pouches.</p>
+                <p class="price">$49.99</p>
+                <button class="buy-btn" onclick="alert('Added to cart! Your marble game will never be the same.')">Buy Now</button>
+            </div>
+
+            <div class="product">
+                <h3>🎯 Aimbot Elite</h3>
+                <p>Never miss a shot again! Advanced trajectory calculation for perfect marble strikes every time. Auto-aims at target marbles with 99.9% accuracy.</p>
+                <p class="price">$79.99</p>
+                <button class="buy-btn" onclick="alert('Added to cart! Prepare to dominate the circle.')">Buy Now</button>
+            </div>
+
+            <div class="product">
+                <h3>⚡ Speed Hack</h3>
+                <p>Make your marbles roll 300% faster! Quantum acceleration technology for impossible shots. Confuse your opponents with supersonic velocities.</p>
+                <p class="price">$59.99</p>
+                <button class="buy-btn" onclick="alert('Added to cart! Gotta go fast!')">Buy Now</button>
+            </div>
+
+            <div class="product">
+                <h3>🛡️ Anti-Ban Shield</h3>
+                <p>Avoid detection from playground monitors and suspicious parents. Includes innocence mode and "I'm just lucky" excuse generator.</p>
+                <p class="price">$39.99</p>
+                <button class="buy-btn" onclick="alert('Added to cart! Stay under the radar.')">Buy Now</button>
+            </div>
+
+            <div class="product">
+                <h3>🌈 Rare Skin Unlocker</h3>
+                <p>Transform your regular glass marbles into holographic, galaxy, and limited edition cat's eye variants. Purely cosmetic but intimidates opponents.</p>
+                <p class="price">$29.99</p>
+                <button class="buy-btn" onclick="alert('Added to cart! Style points +1000')">Buy Now</button>
+            </div>
+
+            <div class="product">
+                <h3>💎 THE ULTIMATE BUNDLE</h3>
+                <p>All hacks included PLUS magnetic marble technology, auto-respawn feature, and unlimited "keepsies" mode. Become unstoppable.</p>
+                <p class="price">$199.99 <span style="color: #ff0000; text-decoration: line-through;">$299.99</span></p>
+                <button class="buy-btn" onclick="alert('Added to cart! You are now a marble god.')">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="warning" style="margin-top: 50px;">
+            💀 WARNING: Use at your own risk. BDB DOT CUM is not responsible for:<br>
+            - Loss of friends<br>
+            - Playground bans<br>
+            - Confiscation of marbles<br>
+            - Being called a "cheater" by other kids<br>
+            - Marble-related injuries from jealous opponents
+        </div>
+    </div>
+
+    <script>
+        function enterSite() {
+            document.getElementById('landing').style.display = 'none';
+            document.getElementById('marketplace').classList.add('active');
+        }
+    </script>
+</body>
+</html>
